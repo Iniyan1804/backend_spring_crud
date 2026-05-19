@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: backend-spring-crud
+    env: java
+    buildCommand: "./mvnw clean install"
+    startCommand: "java -jar target/*.jar"
+
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://ep-twilight-bread-aola5nyn.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
+
+      - key: SPRING_DATASOURCE_USERNAME
+        value: neondb_owner
+
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: npg_SYsU0F1KHmrn
